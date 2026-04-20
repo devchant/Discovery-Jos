@@ -28,10 +28,9 @@ export function Footer() {
           <div>
             <h3 className="font-bold mb-4">Quick Links</h3>
             <ul className="space-y-2 text-sm">
-              <li><a href="/tours" className="hover:text-secondary transition-colors">Tours</a></li>
-              <li><a href="/podcast" className="hover:text-secondary transition-colors">Podcast</a></li>
-              <li><a href="/podcast" className="hover:text-secondary transition-colors">Blog</a></li>
-              <li><a href="/membership" className="hover:text-secondary transition-colors">Membership</a></li>
+              <li><Link href="/tours" className="hover:text-secondary transition-colors">Tours</Link></li>
+              <li><Link href="/about" className="hover:text-secondary transition-colors">About</Link></li>
+              <li><Link href="/contact" className="hover:text-secondary transition-colors">Contact</Link></li>
             </ul>
           </div>
 

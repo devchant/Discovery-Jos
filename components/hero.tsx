@@ -21,7 +21,7 @@ export function Hero() {
       </video>
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60" />
+      <div className="absolute inset-0 bg-black/50" />
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
@@ -32,9 +32,9 @@ export function Hero() {
             <span>Experience</span>
             <span className="inline-flex items-center">
               <img
-                src="/logocut.png"
-                alt="Jos"
-                className="h-[1.2em] w-auto object-contain "
+                src="/logo.png"
+                alt="DiscoverJos"
+                className="h-[1.2em] w-auto object-contain brightness-0 invert"
               />
             </span>
             <span className="w-full lg:w-auto">Like Never Before</span>
@@ -51,17 +51,32 @@ export function Hero() {
                 <ArrowRight size={22} className="group-hover:translate-x-1 transition-transform" />
               </button>
             </Link>
-            <button className="px-10 py-5 bg-white/10 backdrop-blur-md border border-white/30 text-white text-lg font-bold rounded-full hover:bg-white/20 transition-all flex items-center justify-center gap-3">
+            <a 
+              href="instagram://user?username=discover_jos" 
+              onClick={(e) => {
+                // If it's a mobile device, the protocol might not be handled. 
+                // We attempt to open the app, and if it fails or doesn't redirect fast enough, we fall back.
+                const timeout = setTimeout(() => {
+                  window.location.href = "https://instagram.com/discover_jos";
+                }, 1000);
+                
+                // If the app opens, the page might hidden/blur
+                window.addEventListener('blur', () => clearTimeout(timeout), { once: true });
+              }}
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="px-10 py-5 bg-white/10 backdrop-blur-md border border-white/30 text-white text-lg font-bold rounded-full hover:bg-white/20 transition-all flex items-center justify-center gap-3"
+            >
               <Play size={22} fill="currentColor" />
               Watch Our Story
-            </button>
+            </a>
           </div>
         </div>
       </div>
 
       {/* Scroll Indicator */}
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-70">
-        <div className="w-low h-12 bg-gradient-to-b from-primary to-transparent rounded-full" style={{ width: '2px' }} />
+        <div className="w-low h-12 bg-primary rounded-full" style={{ width: '2px' }} />
       </div>
     </section>
   );

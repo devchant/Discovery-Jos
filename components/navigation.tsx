@@ -34,8 +34,6 @@ export function Navigation() {
     { href: '/', label: 'Home' },
     { href: '/tours', label: 'Tours' },
     { href: '/about', label: 'About' },
-    { href: '/podcast', label: 'Podcast' },
-    { href: '/membership', label: 'Community' },
     { href: '/contact', label: 'Contact' },
   ];
 

@@ -19,7 +19,7 @@ export default function ToursPage() {
       <Navigation />
 
       {/* Header */}
-      <section className="bg-gradient-to-br from-primary/10 to-secondary/10 py-16 sm:py-24">
+      <section className="bg-gray-50 py-16 sm:py-24 border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-5xl sm:text-6xl font-bold text-foreground mb-4 text-balance">
             All Tours & Experiences

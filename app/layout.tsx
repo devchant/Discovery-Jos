@@ -18,23 +18,22 @@ export const metadata: Metadata = {
   title: 'DiscoverJos | Jos Tourism & Lifestyle Guide',
   description: 'Explore Jos and Plateau State with Timothy Kunat. Discover authentic tours, cultural experiences, food adventures, and exclusive community memberships.',
   keywords: 'Jos tourism, Plateau State tours, travel guide, Nigerian culture, food tours',
-  generator: 'v0.app',
   icons: {
     icon: [
       {
-        url: '/icon-light-32x32.png',
+        url: '/logo.png',
         media: '(prefers-color-scheme: light)',
       },
       {
-        url: '/icon-dark-32x32.png',
+        url: '/logo.png',
         media: '(prefers-color-scheme: dark)',
       },
       {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
+        url: '/logo.png ',
+        type: 'image/png',
       },
     ],
-    apple: '/apple-icon.png',
+    apple: '/logo.png',
   },
 }
 

@@ -9,7 +9,7 @@ export default function MembershipPage() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary/10 to-secondary/10 py-16 sm:py-24">
+      <section className="bg-gray-50 py-16 sm:py-24 border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl sm:text-6xl font-bold text-foreground mb-4 text-balance">
             Join DiscoverJos Inner Circle
@@ -158,7 +158,7 @@ export default function MembershipPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-gradient-to-r from-primary to-secondary text-primary-foreground py-16 sm:py-24">
+      <section className="bg-primary text-primary-foreground py-16 sm:py-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold mb-4">Ready to Join?</h2>
           <p className="text-xl text-primary-foreground/90 mb-8">
