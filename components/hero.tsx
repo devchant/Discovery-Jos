@@ -1,76 +1,67 @@
-import { ArrowRight, MapPin, Users } from 'lucide-react';
+'use client';
+
+import Link from 'next/link';
+import { ArrowRight, Play } from 'lucide-react';
+import { useLoader } from './loader-provider';
 
 export function Hero() {
+  const { startLoading } = useLoader();
+
   return (
-    <section id="home" className="relative overflow-hidden bg-background py-20 sm:py-32">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left content */}
-          <div className="space-y-8">
-            <div>
-              <div className="inline-block mb-4 px-4 py-2 bg-primary/10 rounded-full">
-                <span className="text-primary font-semibold text-sm">Discover Authentic Experiences</span>
-              </div>
-              <h1 className="text-5xl sm:text-6xl font-bold text-foreground leading-tight text-balance">
-                Experience Jos Like Never Before
-              </h1>
-              <p className="mt-6 text-xl text-foreground/70">
-                Join Timothy Kunat on immersive cultural tours, culinary adventures, and unforgettable experiences across Plateau State. Discover hidden gems and connect with authentic Nigeria.
-              </p>
-            </div>
+    <section id="home" className="relative min-h-[90vh] md:min-h-[90vh] h-auto py-16 md:py-0 flex items-center overflow-hidden">
+      {/* Background Video */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+      >
+        <source src="https://res.cloudinary.com/dlctwbems/video/upload/q_auto/f_auto/v1776576598/134997-760679970_medium_mg5hir.mp4" type="video/mp4" />
+      </video>
 
-            <div className="flex flex-col sm:flex-row gap-4">
-              <button className="px-8 py-4 bg-primary text-primary-foreground font-semibold rounded-lg hover:bg-opacity-90 transition-all flex items-center justify-center gap-2 group">
-                Book Your Adventure
-                <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
-              </button>
-              <button className="px-8 py-4 border-2 border-primary text-primary font-semibold rounded-lg hover:bg-primary/5 transition-all">
-                Watch Our Story
-              </button>
-            </div>
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60" />
 
-            {/* Stats */}
-            <div className="grid grid-cols-3 gap-6 pt-8">
-              <div>
-                <div className="text-3xl font-bold text-primary">1000+</div>
-                <p className="text-sm text-foreground/60">Happy Travelers</p>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-secondary">25+</div>
-                <p className="text-sm text-foreground/60">Unique Tours</p>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-primary">4.8★</div>
-                <p className="text-sm text-foreground/60">Avg Rating</p>
-              </div>
-            </div>
-          </div>
+      {/* Content */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+        <div className="space-y-8 max-w-4xl mx-auto">
 
-          {/* Right - Featured image */}
-          <div className="relative">
-            <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl">
+
+          <h1 className="text-5xl sm:text-7xl lg:text-8xl font-black leading-tight tracking-tight drop-shadow-2xl flex flex-wrap justify-center items-center gap-x-6 gap-y-4">
+            <span>Experience</span>
+            <span className="inline-flex items-center">
               <img
-                src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=600&h=600&fit=crop"
-                alt="Jos city landscape"
-                className="w-full h-full object-cover"
+                src="/logocut.png"
+                alt="Jos"
+                className="h-[1.2em] w-auto object-contain "
               />
-              <div className="absolute inset-0 bg-gradient-to-tr from-primary/30 to-transparent"></div>
-            </div>
+            </span>
+            <span className="w-full lg:w-auto">Like Never Before</span>
+          </h1>
 
-            {/* Floating card */}
-            <div className="absolute -bottom-6 -left-6 bg-white rounded-xl p-4 shadow-xl max-w-xs">
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
-                  <MapPin size={24} className="text-primary" />
-                </div>
-                <div>
-                  <p className="font-semibold text-foreground">Plateau State</p>
-                  <p className="text-sm text-foreground/60">Nigeria's tourism gem</p>
-                </div>
-              </div>
-            </div>
+          <p className="mt-8 text-xl sm:text-2xl text-white/90 max-w-2xl mx-auto font-light leading-relaxed drop-shadow-lg">
+            Join Timothy Kunat on immersive cultural tours, culinary adventures, and unforgettable experiences across Plateau State.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-6 justify-center pt-8">
+            <Link href="/book" onClick={startLoading}>
+              <button className="px-10 py-5 bg-primary text-primary-foreground text-lg font-bold rounded-full hover:scale-105 transition-all shadow-2xl flex items-center justify-center gap-3 group">
+                Book Your Adventure
+                <ArrowRight size={22} className="group-hover:translate-x-1 transition-transform" />
+              </button>
+            </Link>
+            <button className="px-10 py-5 bg-white/10 backdrop-blur-md border border-white/30 text-white text-lg font-bold rounded-full hover:bg-white/20 transition-all flex items-center justify-center gap-3">
+              <Play size={22} fill="currentColor" />
+              Watch Our Story
+            </button>
           </div>
         </div>
+      </div>
+
+      {/* Scroll Indicator */}
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-70">
+        <div className="w-low h-12 bg-gradient-to-b from-primary to-transparent rounded-full" style={{ width: '2px' }} />
       </div>
     </section>
   );

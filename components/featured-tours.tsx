@@ -1,10 +1,13 @@
 'use client';
 
+import Link from 'next/link';
 import { tours } from '@/lib/data';
 import { Clock, MapPin, Star, Users, ArrowRight } from 'lucide-react';
+import { useLoader } from './loader-provider';
 
 export function FeaturedTours() {
   const featuredTours = tours.slice(0, 3);
+  const { startLoading } = useLoader();
 
   return (
     <section id="tours" className="py-20 sm:py-32 bg-background">
@@ -82,9 +85,11 @@ export function FeaturedTours() {
                   </div>
                 </div>
 
-                <button className="w-full mt-4 px-4 py-2 bg-primary text-primary-foreground font-semibold rounded-lg hover:bg-opacity-90 transition-all">
-                  Book Now
-                </button>
+                <Link href="/book" onClick={startLoading}>
+                  <button className="w-full mt-4 px-4 py-2 bg-primary text-primary-foreground font-semibold rounded-lg hover:bg-opacity-90 transition-all">
+                    Book Now
+                  </button>
+                </Link>
               </div>
             </div>
           ))}

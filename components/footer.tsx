@@ -10,11 +10,14 @@ export function Footer() {
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center text-foreground font-bold">
-                DJ
-              </div>
-              <span className="font-bold text-lg">DiscoverJos</span>
+            <div className="mb-4">
+              <Link href="/" className="inline-block">
+                <img 
+                  src="/logo.png" 
+                  alt="DiscoverJos Logo" 
+                  className="h-12 w-auto brightness-0 invert" 
+                />
+              </Link>
             </div>
             <p className="text-sm text-primary-foreground/80">
               Your gateway to authentic Jos and Plateau State experiences.
