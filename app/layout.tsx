@@ -1,4 +1,10 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  userScalable: false,
+};
 import { Geist, Geist_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { LoaderProvider } from '@/components/loader-provider'
@@ -12,7 +18,6 @@ export const metadata: Metadata = {
   title: 'DiscoverJos | Jos Tourism & Lifestyle Guide',
   description: 'Explore Jos and Plateau State with Timothy Kunat. Discover authentic tours, cultural experiences, food adventures, and exclusive community memberships.',
   keywords: 'Jos tourism, Plateau State tours, travel guide, Nigerian culture, food tours',
-  viewport: 'width=device-width, initial-scale=1, user-scalable=no',
   generator: 'v0.app',
   icons: {
     icon: [

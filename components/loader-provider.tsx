@@ -1,6 +1,6 @@
 'use client';
 
-import React, { createContext, useContext, useState, useEffect, useCallback } from 'react';
+import React, { createContext, useContext, useState, useEffect, useCallback, Suspense } from 'react';
 import { usePathname, useSearchParams } from 'next/navigation';
 
 type LoaderContextType = {
@@ -11,21 +11,29 @@ type LoaderContextType = {
 
 const LoaderContext = createContext<LoaderContextType | undefined>(undefined);
 
-export function LoaderProvider({ children }: { children: React.ReactNode }) {
-  const [isLoading, setIsLoading] = useState(false);
+function LoaderProviderInner({ stopLoading }: { stopLoading: () => void }) {
   const pathname = usePathname();
   const searchParams = useSearchParams();
-
-  const startLoading = useCallback(() => setIsLoading(true), []);
-  const stopLoading = useCallback(() => setIsLoading(false), []);
 
   // Automatically stop loading when the route finishes changing
   useEffect(() => {
     stopLoading();
   }, [pathname, searchParams, stopLoading]);
 
+  return null;
+}
+
+export function LoaderProvider({ children }: { children: React.ReactNode }) {
+  const [isLoading, setIsLoading] = useState(false);
+
+  const startLoading = useCallback(() => setIsLoading(true), []);
+  const stopLoading = useCallback(() => setIsLoading(false), []);
+
   return (
     <LoaderContext.Provider value={{ isLoading, startLoading, stopLoading }}>
+      <Suspense fallback={null}>
+        <LoaderProviderInner stopLoading={stopLoading} />
+      </Suspense>
       {children}
     </LoaderContext.Provider>
   );
