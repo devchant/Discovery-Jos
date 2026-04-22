@@ -52,7 +52,7 @@ export function Navigation() {
           <Link href="/" className="flex items-center group" onClick={handleLinkClick}>
             <Image
               src="/logo.png"
-              alt="DiscoverJos Logo"
+              alt="Discover Jos Logo"
               width={180}
               height={64}
               className="h-14 w-auto group-hover:scale-105 transition-transform duration-300"
@@ -106,7 +106,7 @@ export function Navigation() {
           <Link href="/" className="flex items-center" onClick={() => setIsOpen(false)}>
             <Image
               src="/logo.png"
-              alt="DiscoverJos Logo"
+              alt="Discover Jos Logo"
               width={140}
               height={50}
               className="h-10 w-auto"

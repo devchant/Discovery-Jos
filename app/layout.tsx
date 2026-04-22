@@ -15,7 +15,7 @@ const geist = Geist({ subsets: ["latin"] });
 const geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'DiscoverJos | Jos Tourism & Lifestyle Guide',
+  title: 'Discover Jos | Jos Tourism & Lifestyle Guide',
   description: 'Explore Jos and Plateau State with Timothy Kunat. Discover authentic tours, cultural experiences, food adventures, and exclusive community memberships.',
   keywords: 'Jos tourism, Plateau State tours, travel guide, Nigerian culture, food tours',
   icons: {

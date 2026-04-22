@@ -72,7 +72,7 @@ export default function BookingPage() {
             </div>
             <CardTitle className="text-3xl font-black mb-4">Adventure Booked!</CardTitle>
             <CardDescription className="text-lg mb-8">
-              Thank you for choosing Discovery Jos. We've sent the booking details for {participants} participants to your email. Get ready for an authentic Plateau experience!
+              Thank you for choosing Discover Jos. We've sent the booking details for {participants} participants to your email. Get ready for an authentic Plateau experience!
             </CardDescription>
             <Button onClick={() => window.location.href = '/'} className="w-full h-14 text-lg font-bold">
               Back to Home

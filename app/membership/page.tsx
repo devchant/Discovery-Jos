@@ -12,7 +12,7 @@ export default function MembershipPage() {
       <section className="bg-gray-50 py-16 sm:py-24 border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl sm:text-6xl font-bold text-foreground mb-4 text-balance">
-            Join DiscoverJos Inner Circle
+            Join Discover Jos Inner Circle
           </h1>
           <p className="text-xl text-foreground/60 max-w-2xl mx-auto">
             Unlock exclusive experiences, discounts, and insider access to the best of Jos

@@ -17,7 +17,7 @@ export function Testimonials() {
             What Travelers Say About Us
           </h2>
           <p className="text-xl text-primary-foreground/80 max-w-2xl mx-auto">
-            Real stories from real travelers who discovered Jos with DiscoverJos
+            Real stories from real travelers who discovered Jos with Discover Jos
           </p>
         </div>
 

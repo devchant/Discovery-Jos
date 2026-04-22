@@ -34,7 +34,7 @@ export default function AboutPage() {
       <section className="bg-gray-50 py-16 sm:py-24 border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-5xl sm:text-6xl font-bold text-foreground mb-4 text-balance">
-            About DiscoverJos
+            About Discover Jos
           </h1>
           <p className="text-xl text-foreground/60 max-w-2xl">
             Your gateway to authentic Jos and Plateau State experiences
@@ -55,10 +55,10 @@ export default function AboutPage() {
                   Timothy Kunat is a passionate tourism guide, content creator, and cultural enthusiast dedicated to showcasing the hidden gems of Jos and Plateau State.
                 </p>
                 <p>
-                  With years of experience exploring local communities, cuisine, and traditions, Timothy has become a trusted voice in authentic Nigerian tourism. Through DiscoverJos, he connects travelers with genuine experiences that go beyond typical tourist attractions.
+                  With years of experience exploring local communities, cuisine, and traditions, Timothy has become a trusted voice in authentic Nigerian tourism. Through Discover Jos, he connects travelers with genuine experiences that go beyond typical tourist attractions.
                 </p>
                 <p>
-                  Beyond tours, Timothy hosts the "Just Start with Timothy Kunat" podcast, where he discusses business, leadership, culture, and the entrepreneurial journey of building DiscoverJos.
+                  Beyond tours, Timothy hosts the "Just Start with Timothy Kunat" podcast, where he discusses business, leadership, culture, and the entrepreneurial journey of building Discover Jos.
                 </p>
               </div>
             </div>
@@ -79,7 +79,7 @@ export default function AboutPage() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Our Values</h2>
             <p className="text-xl text-primary-foreground/80 max-w-2xl mx-auto">
-              What drives everything we do at DiscoverJos
+              What drives everything we do at Discover Jos
             </p>
           </div>
 

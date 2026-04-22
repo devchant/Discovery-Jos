@@ -1,1 +1,1 @@
-# Discovery-Jos
+# Discover Jos

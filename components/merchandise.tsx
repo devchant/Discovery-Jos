@@ -7,7 +7,7 @@ import { Button } from './ui/button';
 const products = [
   {
     id: 1,
-    name: "Discovery Jos Signature T-Shirt",
+    name: "Discover Jos Signature T-Shirt",
     price: 8500,
     image: "/tshirt.png",
     description: "Premium cotton, breathable and stylish. Wear the spirit of Jos.",
@@ -28,7 +28,7 @@ export function Merchandise() {
         <div className="flex flex-col md:flex-row justify-between items-end gap-6 mb-16">
           <div className="space-y-4">
             <h2 className="text-4xl sm:text-5xl font-black tracking-tight text-foreground">
-              Discovery Jos <span className="text-primary">Gear</span>
+              Discover Jos <span className="text-primary">Gear</span>
             </h2>
             <p className="text-lg text-foreground/60 max-w-xl">
               Take a piece of your adventure home. Our exclusive merchandise is designed for the modern explorer.

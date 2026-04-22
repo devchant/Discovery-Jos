@@ -33,7 +33,7 @@ export function Hero() {
             <span className="inline-flex items-center">
               <img
                 src="/logo.png"
-                alt="DiscoverJos"
+                alt="Discover Jos"
                 className="h-[1.2em] w-auto object-contain brightness-0 invert"
               />
             </span>

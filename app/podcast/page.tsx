@@ -20,7 +20,7 @@ export default function PodcastPage() {
             Podcast & Stories
           </h1>
           <p className="text-xl text-foreground/60 max-w-2xl">
-            Dive into conversations about culture, travel, business, and the DiscoverJos journey
+            Dive into conversations about culture, travel, business, and the Discover Jos journey
           </p>
         </div>
       </section>
